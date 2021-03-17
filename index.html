@@ -10,29 +10,29 @@
   </head>
   <body>
       <div class="flex-container">
-          <nav>
-              <ul>
+          <nav class="navigation-bar">
+              <ul class="navigation-list">
                   <li class="dropdown">
-                      <a href="index.html">Home</a>
-                      <ul>
-                          <li><a>Project</a></li>
-                          <li><a>CV</a></li>
+                      <a href="index.html" class="navigation-links">Home</a>
+                      <ul class="navigation-list dropdown-list">
+                          <li class="link-container display-block"><a class="navigation-links dropdown-link">Project</a></li>
+                          <li class="link-container display-block"><a class="navigation-links dropdown-link">CV</a></li>
                        </ul>
                   </li>
                   <li class="dropdown">
-                      <a href="https://github.com/Srizza93">Github</a>
-                      <ul>
-                          <li><a>Experiences</a></li>
-                          <li><a>Skills</a></li>
+                      <a href="https://github.com/Srizza93" class="navigation-links">Github</a>
+                      <ul class="navigation-list dropdown-list">
+                          <li class="link-container display-block"><a class="navigation-links dropdown-link">Experiences</a></li>
+                          <li class="link-container display-block"><a class="navigation-links dropdown-link">Skills</a></li>
                       </ul>
                   </li>
+                  <a href="https://www.linkedin.com/in/simone-rizza-8b4094156" class="navigation-links">Linkedin</a>
                 </ul>
-                <a href="https://www.linkedin.com/in/simone-rizza-8b4094156">Linkedin</a>
           </nav>
           <div class="middle-container">
               <section class="blog">
                   <h2>Blog posts</h2>
-                  <article>
+                  <article class="blog-post">
                       <h2>What is Lorem Ipsum?</h2>
                       <p>
                         <b>Lorem Ipsum</b> is simply dummy text of the printing and typesetting industry. Lorem Ipsum
@@ -44,7 +44,7 @@
                         including versions of Lorem Ipsum.
                       </p>
                   </article>
-                  <article>
+                  <article class="blog-post">
                       <h2>Why do we use it?</h2>
                       <p>
                         It is a long established fact that a reader will be distracted by the readable content of a page
@@ -56,7 +56,7 @@
                         and the like).
                       </p>
                   </article>
-                  <article>
+                  <article class="blog-post last-post">
                       <h2>Where can I get some?</h2>
                       <p>
                         There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration 
@@ -69,14 +69,14 @@
                       </p>
                   </article>
               </section>
-              <aside>
-                  <a class="reference" href='https://www.freepik.com/vectors/fashion'>Fashion vector created by studiogstock - www.freepik.com</a>
-                  <img src="avatar.jpg" alt="Avatar" class="avatar">
-                  <ul>
-                      <li>Simone</li>
-                      <li>France</li>
-                      <li>1993</li>
-                      <li>Web developer</li>
+              <aside class="sidebar">
+                  <a class="reference display-block" href='https://www.freepik.com/vectors/fashion'>Fashion vector created by studiogstock - www.freepik.com</a>
+                  <img src="avatar.jpg" alt="Avatar" class="avatar display-block">
+                  <ul class="author-description">
+                      <li class="personal-info">Simone</li>
+                      <li class="personal-info">France</li>
+                      <li class="personal-info">1993</li>
+                      <li class="personal-info">Web developer</li>
                   </ul>
               </aside>
             </div>
@@ -100,11 +100,11 @@
                   <input type="submit" value="Submit">
               </form>
           </div>
-          <footer>
-              <ul>
-                  <li>0893492022</li>
-                  <li>test@gmail.com</li>
-                  <li>Copyright</li>
+          <footer class="footer">
+              <ul class="footer-ul">
+                  <li class="footer-data footer-links"><a href="tel:0893492022" class="footer-content">0893492022</a></li>
+                  <li class="footer-data footer-links"><a href="mailto:test@gmail.com" class="footer-content">test@gmail.com</a></li>
+                  <li class="footer-data footer-nonlink">Copyright</li>
               </ul>
           </footer>
       </div>
