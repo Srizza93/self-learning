@@ -1,4 +1,4 @@
-Link: https://srizza93.github.io/self-learning/.
+Link: https://srizza93.github.io/portfolio/.
 
 # Repository with a tasks
 
