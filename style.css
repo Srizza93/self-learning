@@ -1,3 +1,4 @@
+
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 1.2em;
@@ -80,6 +81,13 @@ body {
     margin-left: 5%;
     margin-right: 5%;
     padding-bottom: 75px;
+}
+
+.blog-post h2 {
+    margin: 0;
+}
+.blog-post p {
+    margin-bottom: 0;
 }
 
 .blog {
@@ -241,7 +249,7 @@ input[type=text], textarea {
     }
 
     .sidebar {
-        margin-bottom: 15%;
+        margin-bottom: 0;
         padding-left: 0;
         padding-right: 0;
     }
@@ -258,6 +266,7 @@ input[type=text], textarea {
         margin: 0;
         margin-left: 100px;
         padding: 5px;
+        padding-top: 75px;
     }
 
     .footer {
@@ -271,3 +280,5 @@ input[type=text], textarea {
     }
 
 }
+
+
