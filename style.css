@@ -10,22 +10,21 @@ body {
 }
 
 .flex-container {
-    flex-direction: column;
-}
-
-.display-flex {
     display: flex;
-}
-
-.display-block {
-    display: block;
+    flex-direction: column;
 }
 
 /* Navigation Bar */
 
 .navigation-bar {
+    display: inline-flex;
     width: 100%;
     background-color: black;
+}
+
+.navigation-list {
+    margin: 0;
+    padding: 0;
 }
 
 .navigation-links {
@@ -35,33 +34,35 @@ body {
     display: inline-flex;
 }
 
+.navigation-links a {
+    text-decoration: none;
+    color: white;
+}
+
 .navigation-links:hover {
     background-color: gray;
     transition-duration: 2s;
 }
 
-.navigation-list {
-    display: inline;
-    margin: 0;
-    padding: 0;
-}
 
-.dropdown {
+.navigation-dropdown {
     display: inline-flex;
-    transition-duration: 0.8s;
+    transition-duration: .8s;
 }
 
-.dropdown:hover {
+.navigation-dropdown:hover {
     background-color: gray;
 }
 
-.dropdown:hover ul {
-    display: block;
+.navigation-dropdown:hover ul {
+    display: flex;
+    flex-direction: column;
 }
 
 .dropdown-list {
     display: none;
     position: absolute;
+    margin-top: 53px;
 }
 
 .link-container {
@@ -77,6 +78,7 @@ body {
 /* Middle container */
 
 .middle-container {
+    display: flex;
     margin-left: 5%;
     margin-right: 5%;
     padding-bottom: 75px;
@@ -91,9 +93,7 @@ body {
 
 .blog {
     flex-basis: 80%;
-    padding: 15px;
-    padding-left: 0;
-    padding-bottom: 0;
+    padding: 0px 15px 15px 0px;
 }
 
 .blog-post {
@@ -173,21 +173,18 @@ textarea {
     margin-top: 6px;
     margin-bottom: 16px;
     resize: vertical;
-  }
+}
 
-  .feedback-submit {
-    background-color: gray;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
+.feedback-submit {
+    width: 100px;
     cursor: pointer;
     transition-duration: 2s;
-  }
+    font-weight: bold;
+}
   
-  input[type=submit]:hover {
-    opacity: 0.8;
-  }
+.feedback-submit:hover {
+    opacity: .6;
+}
 
 /* Footer */
 
@@ -235,12 +232,17 @@ textarea {
         line-height: 3;
     }
     
-    .dropdown {
+    .navigation-dropdown {
         display: block;
     }
+
+    .dropdown-list {
+        margin: 0;
+    }
     
-    .dropdown:hover ul {
+    .navigation-dropdown:hover ul {
         display: inline-flex;
+        flex-direction: row;
     }
     
     .navigation-links{
@@ -249,7 +251,13 @@ textarea {
 
     .middle-container {
         flex-direction: column;
+        margin: 0;
+        padding: 0;
         padding-left: 100px;
+    }
+
+    .blog {
+        padding-left: 15px;
     }
 
     .sidebar {
@@ -271,6 +279,10 @@ textarea {
         margin-left: 100px;
         padding: 5px;
         padding-top: 75px;
+    }
+
+    .feedback-submit {
+        width: 100%;
     }
 
     .footer {
