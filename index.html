@@ -9,27 +9,29 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
   <body>
-      <div class="display-flex flex-container">
-          <nav class="display-flex navigation-bar">
+      <div class="flex-container">
+          <nav class="navigation-bar">
               <ul class="navigation-list">
-                  <li class="dropdown">
+                  <li class="navigation-dropdown">
                       <a href="index.html" class="navigation-links">Home</a>
                       <ul class="navigation-list dropdown-list">
-                          <li class="link-container display-block"><a class="navigation-links dropdown-link">Project</a></li>
-                          <li class="link-container display-block"><a class="navigation-links dropdown-link">CV</a></li>
+                          <li class="link-container"><a class="navigation-links dropdown-link">Project</a></li>
+                          <li class="link-container"><a class="navigation-links dropdown-link">CV</a></li>
                        </ul>
                   </li>
-                  <li class="dropdown">
+                  <li class="navigation-dropdown">
                       <a href="https://github.com/Srizza93" class="navigation-links">Github</a>
                       <ul class="navigation-list dropdown-list">
-                          <li class="link-container display-block"><a class="navigation-links dropdown-link">Experiences</a></li>
-                          <li class="link-container display-block"><a class="navigation-links dropdown-link">Skills</a></li>
+                          <li class="link-container"><a class="navigation-links dropdown-link">Experiences</a></li>
+                          <li class="link-container"><a class="navigation-links dropdown-link">Skills</a></li>
                       </ul>
                   </li>
-                  <a href="https://www.linkedin.com/in/simone-rizza-8b4094156" class="navigation-links">Linkedin</a>
+                  <li class="navigation-dropdown">
+                      <a class="navigation-links" href="https://www.linkedin.com/in/simone-rizza-8b4094156">Linkedin</a> 
+                  </li>
                 </ul>
           </nav>
-          <div class="display-flex middle-container">
+          <div class="middle-container">
               <section class="blog">
                   <h2>Blog posts</h2>
                   <article class="blog-post">
@@ -70,8 +72,8 @@
                   </article>
               </section>
               <aside class="sidebar">
-                  <a class="reference display-block" href='https://www.freepik.com/vectors/fashion'>Fashion vector created by studiogstock - www.freepik.com</a>
-                  <img src="avatar.jpg" alt="Avatar" class="avatar display-block">
+                  <a class="reference" href='https://www.freepik.com/vectors/fashion'>Fashion vector created by studiogstock - www.freepik.com</a>
+                  <img src="avatar.jpg" alt="Avatar" class="avatar">
                   <ul class="author-description">
                       <li class="personal-info">Simone</li>
                       <li class="personal-info">France</li>
@@ -81,7 +83,7 @@
               </aside>
             </div>
           <div class="feedback-form">
-              <form>
+              <form action="backend.php">
                   <label for="fname">First Name</label>
                   <input class="feedback-fields" type="text" id="fname" name="firstname" placeholder="Your name...">
 
@@ -97,7 +99,7 @@
                   <label for="feedback">Feedback</label>
                   <textarea class="feedback-fields" id="feedback" name="feedback" placeholder="Write something..."></textarea>
                   
-                  <input class="feedback-submit" type="submit" value="Submit">
+                  <input class="feedback-fields feedback-submit" type="submit" value="Submit">
               </form>
           </div>
           <footer class="footer">
