@@ -32,7 +32,7 @@ body {
     text-decoration: none;
     color: white;
     padding: 15px;
-    display: inline-block;
+    display: inline-flex;
 }
 
 .navigation-links:hover {
@@ -47,7 +47,7 @@ body {
 }
 
 .dropdown {
-    display: inline-block;
+    display: inline-flex;
     transition-duration: 0.8s;
 }
 
@@ -164,7 +164,7 @@ textarea {
     height: 200px;
 }
 
-input[type=text], textarea {
+.feedback-fields {
     width: 100%;
     padding: 12px;
     border: 1px solid #ccc;
@@ -175,7 +175,7 @@ input[type=text], textarea {
     resize: vertical;
   }
 
-  input[type=submit] {
+  .feedback-submit {
     background-color: gray;
     color: white;
     padding: 12px 20px;
@@ -203,7 +203,7 @@ input[type=text], textarea {
 }
 
 .footer-data {
-    display: inline-block;
+    display: inline-flex;
     list-style-type: none;
     padding: 15px;
 }
