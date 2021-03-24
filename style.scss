@@ -1,5 +1,6 @@
 $flex: flex;
 $inline-flex: inline-flex;
+$block: block;
 $column: column;
 $gray: gray;
 $white: white;
@@ -34,6 +35,15 @@ body {
       display: $inline-flex;
       width: $hundred-percent;
       background-color: $black;
+
+      @media only screen and (max-width: 600px) {
+        width: $hundred-pixels;
+        position: fixed;
+        top: $zero;
+        left: $zero;
+        height: $hundred-percent;
+        line-height: 3;
+      }
     
       .navigation-list {
         margin: $zero;
@@ -43,12 +53,21 @@ body {
         .navigation-dropdown {
           display: $inline-flex;
           transition-duration: .8s;
+
+          @media only screen and (max-width: 600px) {
+            display: $block;
+          }
   
           .navigation-links {
             text-decoration: $none;
             color: $white;
             padding: $fifteen-pixels;
             display: $inline-flex;
+
+            @media only screen and (max-width: 600px) {
+              width: $hundred-percent;
+            }
+
           }
         
           .navigation-links a {
@@ -65,6 +84,10 @@ body {
             display: $none;
             position: absolute;
             margin-top: 53px;
+
+            @media only screen and (max-width: 600px) {
+              margin: $zero;
+            }
     
             .link-container {
               background-color: $black;
@@ -82,15 +105,20 @@ body {
       
         .navigation-dropdown:hover {
           background-color: $gray;
+
         }
       
         .navigation-dropdown:hover ul {
-          display: $flex;
-          flex-direction: $column;
+          display: $block;
+
+          @media only screen and (max-width: 600px) {
+            display: $inline-flex;
+          }
+
         }
-      
+        
       }
-    
+
     }
   
     /* Middle container */
@@ -101,10 +129,20 @@ body {
       margin-right: 5%;
       padding-bottom: $seventy-five-pixels;
   
-      
+      @media only screen and (max-width: 600px) {
+        flex-direction: $column;
+        margin: $zero;
+        padding: $zero;
+        padding-left: $hundred-pixels;
+      }
+
       .blog {
         flex-basis: 80%;
         padding: 0px $fifteen-pixels $fifteen-pixels 0px;
+
+        @media only screen and (max-width: 600px) {
+          padding-left: $fifteen-pixels;
+        }
         
         .blog-post {
           border-bottom: 1px dashed $gray;
@@ -137,6 +175,12 @@ body {
         padding-left: 10px;
         padding-right: 10px;
         margin-top: $fifteen-pixels;
+
+        @media only screen and (max-width: 600px) {
+          margin-bottom: $zero;
+          padding-left: $zero;
+          padding-right: $zero;
+        }
   
         .reference {
           text-decoration: $none;
@@ -178,6 +222,13 @@ body {
       margin-right: 5%;
       padding-top: $seventy-five-pixels;
       padding-bottom: $seventy-five-pixels;
+
+      @media only screen and (max-width: 600px) {
+        margin: $zero;
+        margin-left: $hundred-pixels;
+        padding: 5px;
+        padding-top: $seventy-five-pixels;
+      }
   
       textarea {
         height: 200px;
@@ -199,6 +250,11 @@ body {
         cursor: $pointer;
         transition-duration: $two-seconds;
         font-weight: bold;
+
+        @media only screen and (max-width: 600px) {
+          width: $hundred-percent;
+        }
+
       }
       
       .feedback-submit:hover {
@@ -243,89 +299,5 @@ body {
     }
 
   }
-}
-
-
-/* Media Queries */
-
-@media only screen and (max-width: 600px) {
-
-.navigation-bar {
-  position: fixed;
-  top: $zero;
-  left: $zero;
-  height: $hundred-percent;
-  width: $hundred-pixels;
-  line-height: 3;
   
-  .dropdown-list {
-    margin: $zero;
-
-    .navigation-dropdown {
-        display: flex;
-        flex-direction: row;
-        background-color: $gray;
-
-        .navigation-links {
-            width: $hundred-percent;
-        }
-    }
-
-  }
-  
-  .navigation-dropdown:hover ul {
-      display: $inline-flex;
-      flex-direction: row;
-  }
-  
-}
-
-.middle-container {
-  flex-direction: $column;
-  margin: $zero;
-  padding: $zero;
-  padding-left: $hundred-pixels;
-
-  .blog {
-      padding-left: $fifteen-pixels;
-  }
-
-  .sidebar {
-      margin-bottom: $zero;
-      padding-left: $zero;
-      padding-right: $zero;
-
-      .reference {
-          margin-top: 25%;
-      }
-    
-      .avatar {
-          margin-top: 15%;
-      }
-
-  }
-
-}
-
-.feedback-form {
-  margin: $zero;
-  margin-left: $hundred-pixels;
-  padding: 5px;
-  padding-top: $seventy-five-pixels;
-
-  .feedback-submit {
-      width: $hundred-percent;
-  }
-    
-}
-
-.footer {
-    padding-left: $hundred-pixels;
-    .footer-data {
-        display: block;
-        text-align: center;
-        padding: 5px;
-    }
-
-  }
 }
