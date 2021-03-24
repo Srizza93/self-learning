@@ -80,8 +80,8 @@ body {
 
 .middle-container {
     display: flex;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 75px;
+    margin-right: 75px;
     padding-bottom: 75px;
 }
 
@@ -101,7 +101,7 @@ body {
     border-bottom: 1px dashed grey;
     padding-bottom: 35px;
     padding-top: 35px;
-    margin-right: 2%;
+    margin-right: 15px;
     line-height: 2;
 }
 
@@ -115,6 +115,7 @@ body {
     color: white;
     flex-basis: 20%;
     text-align: center;
+    padding-top: 15px;
     padding-left: 10px;
     padding-right: 10px;
     margin-top: 15px;
@@ -124,14 +125,13 @@ body {
     text-decoration: none;
     color: white;
     font-size: 12px;
-    margin-top: 44%;
 }
 
 .avatar {
-    width: 70%;
+    width: 100%;
     height: auto;
     border-radius: 50%;
-    margin-top: 50%;
+    margin-top: 75px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -154,8 +154,8 @@ body {
 .feedback-form {
     color: black;
     border-radius: 5px;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 75px;
+    margin-right: 75px;
     padding-top: 75px;
     padding-bottom: 75px;
     border-top: 1px dashed grey;
@@ -190,8 +190,8 @@ textarea {
 /* Footer */
 
 .footer {
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 75px;
+    margin-right: 75px;
 }
 
 .footer-ul {
@@ -267,12 +267,8 @@ textarea {
         padding-right: 0;
     }
 
-    .reference {
-        margin-top: 25%;
-    }
-
     .avatar {
-        margin-top: 15%;
+        margin-top: 75px;
     }
 
     .feedback-form {
