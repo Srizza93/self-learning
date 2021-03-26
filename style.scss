@@ -1,22 +1,7 @@
 ---
 ---
 
-$flex: flex;
-$inline-flex: inline-flex;
-$block: block;
-$column: column;
-$gray: gray;
-$white: white;
-$black: black;
-$zero: 0;
-$auto: auto;
-$none: none;
-$two-seconds: 2s;
-$fifteen-pixels: 15px;
-$seventy-five-pixels: 75px;
-$hundred-pixels: 100px;
-$hundred-percent: 100%;
-$pointer: pointer;
+@import 'myvariables.scss';
 
 * {
   box-sizing: border-box;
@@ -27,280 +12,278 @@ body {
   font-size: 1.2em;
   font-weight: normal;
   margin: $zero;
+}
 
-  .flex-container {
-    display: $flex;
-    flex-direction: $column;
+.flex-container {
+  display: $flex;
+  flex-direction: $column;
+}
+
+/* Navigation Bar */
+
+.navigation-bar {
+  display: $inline-flex;
+  width: $large-percentage;
+  background-color: $black;
+
+  @media only screen and (max-width: 600px) {
+    width: $large;
+    position: fixed;
+    top: $zero;
+    left: $zero;
+    height: $large-percentage;
+    line-height: 3;
+  }
+
+  .navigation-list {
+    margin: $zero;
+    padding: $zero;
+    list-style-type: $none;
     
-    /* Navigation Bar */
-    
-    .navigation-bar {
+    .navigation-dropdown {
       display: $inline-flex;
-      width: $hundred-percent;
-      background-color: $black;
+      transition-duration: .8s;
 
       @media only screen and (max-width: 600px) {
-        width: $hundred-pixels;
-        position: fixed;
-        top: $zero;
-        left: $zero;
-        height: $hundred-percent;
-        line-height: 3;
-      }
-    
-      .navigation-list {
-        margin: $zero;
-        padding: $zero;
-        list-style-type: $none;
-        
-        .navigation-dropdown {
-          display: $inline-flex;
-          transition-duration: .8s;
-
-          @media only screen and (max-width: 600px) {
-            display: $block;
-          }
-  
-          .navigation-links {
-            text-decoration: $none;
-            color: $white;
-            padding: $fifteen-pixels;
-            display: $inline-flex;
-
-            @media only screen and (max-width: 600px) {
-              width: $hundred-percent;
-            }
-
-          }
-        
-          .navigation-links a {
-            text-decoration: $none;
-            color: $white;
-          }
-        
-          .navigation-links:hover {
-            background-color: $gray;
-            transition-duration: $two-seconds;
-          }
-  
-          .dropdown-list {
-            display: $none;
-            position: absolute;
-            margin-top: 53px;
-
-            @media only screen and (max-width: 600px) {
-              margin: $zero;
-            }
-    
-            .link-container {
-              background-color: $black;
-              transition-duration: $two-seconds;
-            }
-          
-            .link-container:hover {
-              background-color: $gray;
-              cursor: $pointer;
-            }
-    
-          }
-  
-        }
-      
-        .navigation-dropdown:hover {
-          background-color: $gray;
-
-        }
-      
-        .navigation-dropdown:hover ul {
-          display: $block;
-
-          @media only screen and (max-width: 600px) {
-            display: $inline-flex;
-          }
-
-        }
-        
+        display: $block;
       }
 
-    }
-  
-    /* Middle container */
-    
-    .middle-container {
-      display: $flex;
-      margin-left: 5%;
-      margin-right: 5%;
-      padding-bottom: $seventy-five-pixels;
-  
-      @media only screen and (max-width: 600px) {
-        flex-direction: $column;
-        margin: $zero;
-        padding: $zero;
-        padding-left: $hundred-pixels;
-      }
-
-      .blog {
-        flex-basis: 80%;
-        padding: 0px $fifteen-pixels $fifteen-pixels 0px;
+      .navigation-links {
+        text-decoration: $none;
+        color: $white;
+        padding: $small;
+        display: $inline-flex;
 
         @media only screen and (max-width: 600px) {
-          padding-left: $fifteen-pixels;
+          width: $large-percentage;
         }
-        
-        .blog-post {
-          border-bottom: 1px dashed $gray;
-          padding-bottom: 35px;
-          padding-top: 35px;
-          margin-right: 2%;
-          line-height: 2;
-        }
-        
-        .blog-post h2 {
+
+      }
+    
+      .navigation-links a {
+        text-decoration: $none;
+        color: $white;
+      }
+    
+      .navigation-links:hover {
+        background-color: $gray;
+        transition-duration: $delay;
+      }
+
+      .dropdown-list {
+        display: $none;
+        position: absolute;
+        margin-top: 53px;
+
+        @media only screen and (max-width: 600px) {
           margin: $zero;
         }
-    
-        .blog-post p {
-          margin-bottom: $zero;
-        }
-        
-        .last-post {
-          border-bottom: $none;
-          padding-bottom: $zero;
-        }
-  
-      }
-    
-      .sidebar {
-        background-color: $black;
-        color: $white;
-        flex-basis: 20%;
-        text-align: center;
-        padding-left: 10px;
-        padding-right: 10px;
-        margin-top: $fifteen-pixels;
 
-        @media only screen and (max-width: 600px) {
-          margin-bottom: $zero;
-          padding-left: $zero;
-          padding-right: $zero;
-        }
-  
-        .reference {
-          text-decoration: $none;
-          color: $white;
-          font-size: 12px;
-          margin-top: 44%;
+        .link-container {
+          background-color: $black;
+          transition-duration: $delay;
         }
       
-        .avatar {
-          width: 70%;
-          height: $auto;
-          border-radius: 50%;
-          margin-top: 50%;
-          margin-left: $auto;
-          margin-right: $auto;
+        .link-container:hover {
+          background-color: $gray;
+          cursor: $pointer;
         }
-      
-        
-        .author-description {
-          padding-left: $zero;
-          line-height: 1.5;
-    
-          .personal-info {
-            list-style-type: $none;
-          }
-    
-        }
-  
+
       }
-    
+
     }
   
-    /* Feedback form */
+    .navigation-dropdown:hover {
+      background-color: $gray;
+
+    }
   
-    .feedback-form {
-      color: $black;
-      border-radius: 5px;
-      margin-left: 5%;
-      margin-right: 5%;
-      padding-top: $seventy-five-pixels;
-      padding-bottom: $seventy-five-pixels;
+    .navigation-dropdown:hover ul {
+      display: $block;
 
       @media only screen and (max-width: 600px) {
-        margin: $zero;
-        margin-left: $hundred-pixels;
-        padding: 5px;
-        padding-top: $seventy-five-pixels;
+        display: $inline-flex;
       }
-  
-      textarea {
-        height: 200px;
-      }
-    
-      .feedback-fields {
-        width: $hundred-percent;
-        padding: 12px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        box-sizing: border-box;
-        margin-top: 6px;
-        margin-bottom: 16px;
-        resize: vertical;
-      }
-    
-      .feedback-submit {
-        width: $hundred-pixels;
-        cursor: $pointer;
-        transition-duration: $two-seconds;
-        font-weight: bold;
 
-        @media only screen and (max-width: 600px) {
-          width: $hundred-percent;
-        }
+    }
+    
+  }
 
-      }
-      
-      .feedback-submit:hover {
-        opacity: .6;
-      }
-  
+}
+
+/* Middle container */
+
+.middle-container {
+  display: $flex;
+  margin-left: $medium;
+  margin-right: $medium;
+  padding-bottom: $medium;
+
+  @media only screen and (max-width: 600px) {
+    flex-direction: $column;
+    margin: $zero;
+    padding: $zero;
+    padding-left: $large;
+  }
+
+  .blog {
+    flex-basis: 80%;
+    padding: 0px $small $small 0px;
+
+    @media only screen and (max-width: 600px) {
+      padding-left: $small;
+    }
+    
+    .blog-post {
+      border-bottom: 1px dashed $gray;
+      padding-bottom: 35px;
+      padding-top: 35px;
+      margin-right: $small;
+      line-height: 2;
+    }
+    
+    .blog-post h2 {
+      margin: $zero;
+    }
+
+    .blog-post p {
+      margin-bottom: $zero;
+    }
+    
+    .last-post {
+      border-bottom: $none;
+      padding-bottom: $zero;
+    }
+
+  }
+
+  .sidebar {
+    background-color: $black;
+    color: $white;
+    flex-basis: 20%;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: $small;
+    margin-top: $small;
+
+    @media only screen and (max-width: 600px) {
+      margin-bottom: $zero;
+      padding-left: $zero;
+      padding-right: $zero;
+    }
+
+    .reference {
+      text-decoration: $none;
+      color: $white;
+      font-size: 12px;
     }
   
-    /* Footer */
+    .avatar {
+      width: 100%;
+      height: $auto;
+      border-radius: 50%;
+      margin-top: $medium;
+      margin-left: $auto;
+      margin-right: $auto;
+    }
   
-    .footer {
-      margin-left: 5%;
-      margin-right: 5%;
-  
-      .footer-ul {
-        padding: $zero;
-        font-size: small;
-        text-align: center;
-  
-        .footer-data {
-          display: $inline-flex;
-          list-style-type: $none;
-          padding: $fifteen-pixels;
-        }
-      
-        .footer-content {
-          text-decoration: $none;
-          color: $black;
-        }
-      
-        .footer-links:hover {
-          transition-duration: $two-seconds;
-          background-color: $black;
-        }
-      
-        .footer-links:hover .footer-content{
-          color: $white;
-        }
-  
+    
+    .author-description {
+      padding-left: $zero;
+      line-height: 1.5;
+
+      .personal-info {
+        list-style-type: $none;
       }
-  
+
+    }
+
+  }
+
+}
+
+/* Feedback form */
+
+.feedback-form {
+  color: $black;
+  border-radius: 5px;
+  margin-left: $medium;
+  margin-right: $medium;
+  padding-top: $medium;
+  padding-bottom: $medium;
+
+  @media only screen and (max-width: 600px) {
+    margin: $zero;
+    margin-left: $large;
+    padding: 5px;
+    padding-top: $medium;
+  }
+
+  .feedback-fields {
+    width: $large-percentage;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+
+  .feedback-submit {
+    width: $large;
+    cursor: $pointer;
+    transition-duration: $delay;
+    font-weight: bold;
+
+    @media only screen and (max-width: 600px) {
+      width: $large-percentage;
     }
 
   }
   
+  .feedback-submit:hover {
+    opacity: .6;
+  }
+
+}
+
+/* Footer */
+
+.footer {
+  margin-left: $medium;
+  margin-right: $medium;
+
+  @media only screen and (max-width: 600px) {
+    padding-left: $large;
+    margin: $zero;
+  }
+
+  .footer-ul {
+    padding: $zero;
+    font-size: small;
+    text-align: center;
+
+    .footer-data {
+      display: $inline-flex;
+      list-style-type: $none;
+      padding: $small;
+    }
+  
+    .footer-content {
+      text-decoration: $none;
+      color: $black;
+    }
+  
+    .footer-links:hover {
+      transition-duration: $delay;
+      background-color: $black;
+    }
+  
+    .footer-links:hover .footer-content{
+      color: $white;
+    }
+
+  }
+
 }
